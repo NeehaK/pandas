@@ -2128,19 +2128,19 @@ class DatetimeIndex(DatelikeOps, TimelikeOps, DatetimeIndexOpsMixin,
 
     def day_name(self, locale=None):
         """
-        Return the day names of the DateTimeIndex with specified locale.
+        Return day names.
+
+        Provides day names of the DateTimeIndex with specified locale.
 
         Parameters
         ----------
         locale : string, default None (English locale)
-            locale determining the language in which to return the day name
+            Locale determining the language in which to return the day name.
 
         Returns
         -------
-        month_names : Index
-            Index of day names
-
-        .. versionadded:: 0.23.0
+        day_names : Index
+            Index instance of day names.
         """
         values = self.asi8
         if self.tz is not None:
